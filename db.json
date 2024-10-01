@@ -1,0 +1,146 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "permissions": {
+        "canAddManagers": true,
+        "canViewStudents": true,
+        "canAssignQuizzes": true,
+        "canViewAllQuizzes": true,
+        "canViewQuizResults": true,
+        "canViewStudentDetails": true,
+        "canViewAssignedQuizzes": true,
+        "canViewPendingQuizzes": true,
+        "canViewAttemptedQuizzes": true,
+        "canViewAssignedQuizResults": true
+      }
+    },
+    {
+      "id": 2,
+      "name": "Manager User",
+      "email": "manager@example.com",
+      "password": "manager123",
+      "role": "manager",
+      "permissions": {
+        "canAddManagers": false,
+        "canViewStudents": false,
+        "canAssignQuizzes": true,
+        "canViewAllQuizzes": true,
+        "canViewQuizResults": true,
+        "canViewStudentDetails": false,
+        "canViewAssignedQuizzes": true,
+        "canViewPendingQuizzes": true,
+        "canViewAttemptedQuizzes": true,
+        "canViewAssignedQuizResults": true
+      },
+      "additionalPermissions": [
+        "can view applicants",
+        "can edit details",
+        "can delete applicants"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Student User",
+      "email": "student@example.com",
+      "password": "student123",
+      "role": "student",
+      "permissions": {
+        "canAddManagers": false,
+        "canViewStudents": false,
+        "canAssignQuizzes": false,
+        "canViewAllQuizzes": false,
+        "canViewQuizResults": false,
+        "canViewStudentDetails": false,
+        "canViewAssignedQuizzes": true,
+        "canViewPendingQuizzes": true,
+        "canViewAttemptedQuizzes": true,
+        "canViewAssignedQuizResults": true
+      },
+      "attemptedQuizzes": [] 
+    }
+  ],
+  "quizzes": [
+    {
+      "id": 1,
+      "title": "Basic Math Quiz",
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is 2 + 2?",
+          "options": [
+            { "text": "3" },
+            { "text": "4" },
+            { "text": "5" }
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": 2,
+          "text": "What is 3 * 3?",
+          "options": [
+            { "text": "6" },
+            { "text": "9" },
+            { "text": "12" }
+          ],
+          "correctAnswer": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "History Quiz",
+      "questions": [
+        {
+          "id": 1,
+          "text": "Who was the first president of the United States?",
+          "options": [
+            { "text": "George Washington" },
+            { "text": "Thomas Jefferson" },
+            { "text": "Abraham Lincoln" }
+          ],
+          "correctAnswer": 0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Advanced Science Quiz",
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is 2 + 2?",
+          "options": [
+            { "text": "3" },
+            { "text": "4" },
+            { "text": "5" }
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": 2,
+          "text": "What is 3 * 3?",
+          "options": [
+            { "text": "6" },
+            { "text": "9" },
+            { "text": "12" }
+          ],
+          "correctAnswer": 1
+        }
+      ]
+    }
+  ],
+  "submissions": [
+    {
+      "userId": 1,
+      "quizId": 1,
+      "score": 2,
+      "answers": [0, 0],
+      "submittedAt": "2024-09-24T10:30:00Z"
+    }
+  ]
+}
